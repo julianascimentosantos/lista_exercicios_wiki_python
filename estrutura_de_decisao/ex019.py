@@ -9,8 +9,11 @@ Testar com: 326, 300, 100, 320, 310, 305, 301, 101, 311, 111, 25, 20, 10, 21, 11
 num = int(input('Digite um número inteiro menor de 1000: '))
 
 
-if num == 1:
-    print('1 unidade')
-elif 1 < num < 10:
-    print(f'{num} unidades')
+unidade = num % 10
+num = (num - unidade)/10
+dezena = num % 10
+num = (num - dezena) / 10
+centena = num
+
+print(int(centena), 'centena(s),', int(dezena), 'dezena(s) e', unidade, 'unidade(s)')
 
